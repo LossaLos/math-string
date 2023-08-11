@@ -86,3 +86,124 @@ function power() {
 	    res.innerHTML = q + " power " + nb2 + " = " + nb;
     });
 }
+
+function fibo() {
+    const resDiv = document.getElementById('res');
+    resDiv.innerHTML = '<input  class="input" type="text" id="input">'
+                     + '<button class="btnn" id="customButton">Calc</button>';
+    const customButton = document.getElementById('customButton');
+    customButton.addEventListener('click', () => {
+        let res = document.getElementById('ress'); 
+        let index = parseInt(document.getElementById('input').value);
+       
+        if (index < 0) 
+        {
+            res.innerHTML = "Number must be positive.";
+        } else if (isFibonacci(index)) 
+        {
+            res.innerHTML = `${index} is a Fibonacci number.`;
+        } else 
+        {
+            res.innerHTML = `${index} is not a Fibonacci number.`;
+        }
+    });
+}
+
+function isPerfectSquare(n) 
+{
+    let sqrt = Math.sqrt(n);
+    return sqrt === Math.floor(sqrt);
+}
+
+function isFibonacci(n) 
+{
+    return isPerfectSquare(5 * n * n + 4) || isPerfectSquare(5 * n * n - 4);
+}
+
+function nprime() {
+    const resDiv = document.getElementById('res');
+    resDiv.innerHTML = '<input  class="input" type="text" id="input">'
+                     + '<button class="btnn" id="customButton">Calc</button>';
+    const customButton = document.getElementById('customButton');
+    customButton.addEventListener('click', () => {
+
+        let res = document.getElementById('ress');
+        let nb = parseInt(document.getElementById('input').value);
+        
+        let n = ft_find_next_prime(nb);
+
+        res.innerHTML = "Next prime after " + nb + " is " + n;
+    });
+}
+
+function	ft_is_prime(n)
+{
+	let 	i = 2;
+
+	if (n <= 1)
+    {
+        return (0);
+    }
+	while (n % i != 0 && i <= n)
+	{
+        i++;
+    }
+	if (n > 1 && i >= n)
+	{
+        return (1);
+    }
+	else
+	{
+        return (0);
+    }
+}
+
+function	ft_find_next_prime(n)
+{
+	let	i;
+	i = ft_is_prime(n);
+	if (i === 1)
+	{
+        n++;
+    }
+	while (ft_is_prime(n) === 0)
+	{
+        n++;
+    }
+	return (n);
+}
+
+function sqrt() {
+    const resDiv = document.getElementById('res');
+    resDiv.innerHTML = '<input  class="input" type="text" id="input">'
+                     + '<button class="btnn" id="customButton">Calc</button>';
+    const customButton = document.getElementById('customButton');
+    customButton.addEventListener('click', () => {
+
+        let res = document.getElementById('ress');
+        let nb = parseFloat(document.getElementById('input').value);
+        let squareRoot = Math.sqrt(nb);
+        res.innerHTML = "Square root of " + nb + " is " + squareRoot.toFixed(2);
+    });
+}
+
+function odd() {
+    const resDiv = document.getElementById('res');
+    resDiv.innerHTML = '<input  class="input" type="text" id="input">'
+                     + '<button class="btnn" id="customButton">Calc</button>';
+    const customButton = document.getElementById('customButton');
+    customButton.addEventListener('click', () => {
+
+        let res = document.getElementById('ress');
+        let nb = parseFloat(document.getElementById('input').value);
+        
+        if ((nb % 2) == 0)
+        {
+            res.innerHTML = nb + " is odd"
+        }
+        else
+        {
+            res.innerHTML = nb + " is not odd"
+        }
+    });
+}

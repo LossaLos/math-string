@@ -22,7 +22,6 @@ body {
         border-radius: 50%;
     }
 }
-
 .background {
     position: fixed;
     z-index: -1;
@@ -44,10 +43,6 @@ body {
     background: rgba(255, 255, 255, 0.2);
     animation: animate 12s linear infinite;
 }
-
-
-
-
 .background li:nth-child(0) {
     left: 36%;
     width: 58px;
@@ -358,4 +353,3 @@ body {
     align-items: center;
     justify-content: center;
 }
-

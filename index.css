@@ -5,13 +5,12 @@ body {
     position: relative;
     font-size: 30px;
     overflow: hidden;
-    background: linear-gradient(45deg, #ff80a0, #1a6582, #305bc7);
+    background: linear-gradient(45deg, #ff80a0, #634180, #305bc7);
     background-size: 400% 400%;
-    animation: backgroundAnimation 20s linear infinite;
+    animation: backgroundAnimation 15s linear infinite;
     font-family: 'Press Start 2P', cursive;
     color: white;
 }
-
 @keyframes backgroundAnimation {
     0% {
         background-position: 0% 50%;
@@ -23,7 +22,6 @@ body {
         background-position: 0% 50%;
     }
 }
-
 .bg {
     position: fixed;
     top: 0;
@@ -44,6 +42,11 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    height: 200px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .string:hover,
@@ -69,3 +72,12 @@ body {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.or {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: white;
+}
